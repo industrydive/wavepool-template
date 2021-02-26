@@ -32,7 +32,7 @@
 						</div>
 						<div class="card-body">
 						<p class="card-text">{{ticket.description}}</p>
-						<p class="card-text">Test suit: <code>python manage.py test wavepool.tests.{{ticket.test_class}}</code></p>
+						<p class="card-text">Test suite: <code>python manage.py test wavepool.tests.{{ticket.test_class}}</code></p>
 						<h2 class="card-title">Acceptance Criteria:</h2>
 							<ul>
 							{% for ac in ticket.acceptance_criteria %}
