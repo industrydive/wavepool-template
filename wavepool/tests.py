@@ -131,7 +131,7 @@ class SiteFrontPage(TestBase):
     def test_top_stories(self):
         """ Verify that the top stories section contains the 3 most recent stories, excluding the cover story
         """
-        latest_four_stories = NewsPost.objects.all().order_by('publish_date')[:4]
+        latest_four_stories = NewsPost.objects.all().order_by('-publish_date')[:4]
         cover_story = latest_four_stories[2]
         cover_story.is_cover_story = True
         cover_story.save()
@@ -166,7 +166,7 @@ class SiteFrontPage(TestBase):
     def test_archive_stories(self):
         """ Verify that the archived stories section contains all newsposts that are not the cover story or top stories
         """
-        all_stories = NewsPost.objects.all().order_by('publish_date')
+        all_stories = NewsPost.objects.all().order_by('-publish_date')
         cover_story = all_stories[7]
         cover_story.is_cover_story = True
         cover_story.save()
