@@ -50,9 +50,9 @@
 	{% if newspost.tags %}
 		<div class="row">
 			Tags:
-				{% for tag in newspost.tags %}
-					<div class="label label--tag">{{tag}}</div>
-				{% endfor %}
+			{% for tag in newspost.tags %}
+				<div class="label label--tag">{{tag}}</div>
+			{% endfor %}
 		</div>
 	{% endif %}
 {% endblock %}
