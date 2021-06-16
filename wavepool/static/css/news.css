@@ -1,74 +1,93 @@
-#coverstory {
+/* common elements */
+.label {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.2rem;
+  background-color: #929090;
+  color: #FFFFFF;
+}
+.label--soft {
+  background-color: #D2D1D1;
+  color: #615F5F;
+}
+.label--loud {
+  background-color: #000000;
+}
+.label--tag {
+  background-color: #EF3F3F;
+  color: #000000;
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+.label--tag:hover {
+  background-color: #D2D1D1;
+}
+
+/* ads */
+.spoonser {
+  border: solid 2px #288BD2;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+}
+.spoonser a:hover {
+  color: initial;
+}
+.spoonser-content {
+  background-color: #CCCCCC;
+}
+.spoonser-text {
+  margin-top: 0.7rem;
+  display: block;
+}
+
+/* feeds */
+.feed {
+  list-style-type: none;
+  padding: 0;
+}
+.feed--callout {
   background-color: #f9f9f9;
   border: solid 1px #e6e6e6;
   padding: 1rem;
   margin-right: 1.2rem;
 }
-#coverstory a {
+.feed--callout a {
   font-size: 1.2rem;
 }
-
-#topstories {
-  padding-top: 1rem;
-}
-#topstories a {
+.feed-link a {
   font-size: 1rem;
 }
-
-#frontpage-archive {
-  margin-top: 1.5rem;
+.feed li {
+  border-bottom: 1px solid #CCCCCC;
+  margin: 0.3rem 0 1rem 0;
+}
+.feed li:last-child {
+  border-bottom: 0;
 }
 
-.pubdate {
-  text-transform: uppercase;
-  color: #929090;
-  font-size: 0.7rem;
-  font-weight: bold;
-  display: block;
+/* detail page */
+.story {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #288BD2;
 }
-
-h1 .pubdate {
-  font-size: 0.9rem;
-}
-
-.newspost-detail a {
-  color: #929090;
-}
-.newspost-detail a:hover {
-  color: #f94040;
-}
-.newspost-detail h1 {
+.story h1 {
   border-bottom: 1px solid #f94040;
 }
-
-.newspost-body {
-  margin-top: 1rem;
-  width: 90%;
+.story-byline a {
+  color: #929090;
 }
-.newspost-body a {
+.story-byline a:hover {
+  color: #f94040;
+}
+.story-content a {
   text-decoration: underline;
   font-weight: normal;
 }
-.newspost-body a:hover {
+.story-content a:hover {
   text-decoration: underline;
-}
-
-#newspost-sponsorship {
-  border: solid 2px #000000;
-  margin-bottom: 3rem;
-}
-
-#newspost-sponsorship a:hover {
-  color: initial;
-}
-
-#sponsor-content {
-  background-color: #CCCCCC;
-}
-
-#sponsor-text {
-  margin-top: 0.7rem;
-  display: block;
 }
 
 /*# sourceMappingURL=news.css.map */
