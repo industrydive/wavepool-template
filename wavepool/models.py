@@ -23,7 +23,7 @@ class NewsPost(models.Model):
 
     @property
     def url(self):
-        return reverse('newspost_detail')
+        return reverse('newspost_detail', kwargs={'newspost_id': self.pk})
 
     @property
     def teaser(self):
