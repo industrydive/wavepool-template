@@ -1,4 +1,9 @@
 {% extends 'wavepool/base.html' %}
+{% load static %}
+
+{% block extra_style %}
+	<link href="{% static 'css/instructions.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block page_content %}
 	<div id="instructions">
