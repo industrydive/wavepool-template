@@ -15,7 +15,7 @@
 							<div class="feed-link">
 								<a href="{{ cover_story.url }}">{{ cover_story.title }}</a>
 							</div>
-							<img src="media/image/placeholder-img.jpg"  width="300" height="175" />
+							<img src="{% static 'image/placeholder-img.jpg' %}"  width="300" height="175" />
 							<div class="feed-teaser" data-story_id="{{cover_story.pk}}">
 								{{ cover_story.teaser|safe  }} ...
 							</div>
