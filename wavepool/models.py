@@ -2,6 +2,9 @@ from django.db import models
 from django.urls import reverse
 from django.utils import timezone
 
+from taxonomy.models import DiveSite, Topic
+
+
 DIVESITE_SOURCE_NAMES = {
     'retaildive': 'Retail Dive',
     'ciodive': 'CIO Dive',
@@ -20,6 +23,11 @@ class NewsPost(models.Model):
     source = models.URLField()
     is_cover_story = models.BooleanField(default=False)
     publish_date = models.DateField(default=timezone.now)
+    divesite = models.ForeignKey(DiveSite, null=True, on_delete=models.SET_NULL)
+    topics = models.ManyToManyField(Topic)
+
+    def __str__(self):
+        return '<{}> {}'.format(self.divesite.url_name, self.title)
 
     @property
     def url(self):

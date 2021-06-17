@@ -1,6 +1,7 @@
 from django.template import loader
 from django.http import HttpResponse
 
+from advertising import get_ad
 from wavepool.models import NewsPost
 from wavepool.code_exercise_defs import code_exercise_defs, code_review_defs, code_design_defs
 from django.conf import settings
@@ -31,9 +32,9 @@ def newspost_detail(request, newspost_id):
     template = loader.get_template('wavepool/newspost.html')
     newspost = NewsPost.objects.get(pk=newspost_id)
     context = {
-        'newspost': newspost
+        'newspost': newspost,
+        'ad': get_ad()
     }
-
     return HttpResponse(template.render(context, request))
 
 

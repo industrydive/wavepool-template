@@ -9,10 +9,10 @@
 				<a target="_blank" href="https://www.google.com/search?q=fake+company+logos&sxsrf=ALeKk01d0-UuzpkF3NVqdRPo7VB6IqqSsg:1599834685488&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjdvYLRqOHrAhVIl3IEHUrYA6QQ_AUoAXoECAwQAw&biw=1420&bih=746">
 					<div class="row">
 						<div class="col-4 spoonsor-image">
-							<img src="{% static 'image/fastbanana.png' %}" width="200px" />
+							<img src="{% static 'spoonsers/' %}{{ad.logo}}" width="200px" />
 						</div>
 						<div class="col spoonsor-content">
-							<span class="spoonsor-text">This news post is brought to you by Fast Banana - get your bananas fast!</span>
+							<span class="spoonsor-text">This news post is brought to you by {{ad.company_name}} - {{ad.copy}}</span>
 						</div>
 					</div>
 				</a>
@@ -37,7 +37,7 @@
 					</h1>
 				</div>
 				<div class="row">
-					<a href="{{newspost.source}}" target="_blank">See the live story at {{newspost.source_divesite_name}}
+					<a href="{{newspost.source}}" target="_blank">See the live story at {{newspost.divesite.display_name}}
 					</a>
 				</div>
 			</span>
@@ -49,9 +49,9 @@
 
 	{% if newspost.tags %}
 		<div class="row">
-			Tags:
-			{% for tag in newspost.tags %}
-				<div class="label label--tag">{{tag}}</div>
+			Topics:
+			{% for topic in newspost.topics.all %}
+				<div class="label label--tag">{{topic.display_name}}</div>
 			{% endfor %}
 		</div>
 	{% endif %}
