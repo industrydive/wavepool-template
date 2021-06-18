@@ -1,6 +1,10 @@
 {% extends 'wavepool/base.html' %}
 {% load static %}
 
+{% block extra_style %}
+	<link href="{% static 'css/news.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block page_content %}
 	<div class="row">
 		<div class="col-md-4">
@@ -34,5 +38,10 @@
 	<div class="row"><h2>Feed</h2></div>
 	<div id="archive" class="row">
 		{% include 'news/includes/news_feed.html' with feed=recent_stories feed_id="recent_stories" format="basic" %}
+	</div>
+	<div class="row pagenav">
+		<div class="pagenav-link">
+			<a href="{% url 'newspost_archive' %}">Archive >></a>
+		</div>
 	</div>
 {% endblock %}

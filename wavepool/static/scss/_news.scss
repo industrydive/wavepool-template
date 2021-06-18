@@ -1,3 +1,15 @@
+/* colors */
+$dive-red: #f94040;
+$dive-red-2: #EF3F3F;
+$dive-black: #000000;
+$dive-gray-extra-light: #F1F0F0;
+$dive-gray-light: #D2D1D1;
+$dive-gray-dark: #929090;
+$dive-gray-medium: #615F5F; 
+$dive-white: #FFFFFF;
+$dive-spoonser-blue: #288BD2;
+
+
 /* common elements */
 .label {
 	text-transform: uppercase;
@@ -5,29 +17,44 @@
 	font-weight: bold;
 	display: inline-block;
 	padding: .2rem;
-	background-color: #929090;
-	color: #FFFFFF;
+	background-color: $dive-gray-dark;
+	color: $dive-white;
 	&--soft {
-		background-color: #D2D1D1;
-		color: #615F5F;
+		background-color: $dive-gray-light;
+		color: $dive-gray-medium;
 	}
 	&--loud {
-		background-color: #000000;
+		background-color: $dive-black;
 	}
 	&--tag {
-		background-color: #EF3F3F;
-		color: #000000;
+		background-color: $dive-red-2;
+		color: $dive-black;
 		margin-left: .5rem;
 		padding: .2rem .5rem;
 		&:hover {
-			background-color: #D2D1D1;
+			background-color: $dive-gray-light;
 		}
 	}
 }
 
+.pagenav {
+	display: block;
+	width: 100%;
+	&-link {
+		display: block;
+		float: right;
+	}
+  	a {
+    	color: $dive-red;
+    	&:hover {
+    		color: $dive-black;
+    	}
+  	}
+}
+
 /* ads */
 .spoonser {
-	border: solid 2px #288BD2;
+	border: solid 2px $dive-spoonser-blue;
 	margin-bottom: 2rem;
 	padding: .5rem 0;
 	a {
@@ -36,7 +63,7 @@
 		}
 	}
 	&-content {
-		background-color: #CCCCCC;
+		background-color: $dive-gray-light;
 	}
 	&-text {
 		margin-top: .7rem;
@@ -51,8 +78,8 @@
 	list-style-type: none;
 	padding: 0;
 	&--callout {
-		background-color: #f9f9f9;
-		border: solid 1px #e6e6e6;
+		background-color: $dive-gray-extra-light;
+		border: solid 1px $dive-gray-light;
 		padding: 1rem;
 		margin-right: 1.2rem;
 		a {
@@ -65,7 +92,7 @@
 		}
 	}
 	li {
-		border-bottom: 1px solid #CCCCCC;
+		border-bottom: 1px solid $dive-gray-light;
 		margin: .3rem 0 1rem 0;
 		&:last-child {
 		 border-bottom: 0;
@@ -73,20 +100,20 @@
 	}
 }
 
-/* detail page */
+/* story page */
 .story {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	border-bottom: 1px solid #288BD2;
+	border-bottom: 1px solid $dive-gray-light;
 	h1 {
-		border-bottom: 1px solid #f94040;
+		border-bottom: 1px solid $dive-red;
 	}
 	
 	&-byline {
 		a {
-			color: #929090;
+			color: $dive-gray-dark;
 			&:hover {
-				color: #f94040;
+				color: $dive-red;
 			}
 		}
 	}

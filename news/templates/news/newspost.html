@@ -1,6 +1,10 @@
 {% extends 'wavepool/base.html' %}
 {% load static %}
 
+{% block extra_style %}
+	<link href="{% static 'css/news.css' %}" rel="stylesheet">
+{% endblock %}
+
 {% block page_content %}
 	<div class="row">
 		<div class="spoonser">

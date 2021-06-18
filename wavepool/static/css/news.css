@@ -1,3 +1,4 @@
+/* colors */
 /* common elements */
 .label {
   text-transform: uppercase;
@@ -25,6 +26,21 @@
   background-color: #D2D1D1;
 }
 
+.pagenav {
+  display: block;
+  width: 100%;
+}
+.pagenav-link {
+  display: block;
+  float: right;
+}
+.pagenav a {
+  color: #f94040;
+}
+.pagenav a:hover {
+  color: #000000;
+}
+
 /* ads */
 .spoonser {
   border: solid 2px #288BD2;
@@ -35,7 +51,7 @@
   color: initial;
 }
 .spoonser-content {
-  background-color: #CCCCCC;
+  background-color: #D2D1D1;
 }
 .spoonser-text {
   margin-top: 0.7rem;
@@ -48,8 +64,8 @@
   padding: 0;
 }
 .feed--callout {
-  background-color: #f9f9f9;
-  border: solid 1px #e6e6e6;
+  background-color: #F1F0F0;
+  border: solid 1px #D2D1D1;
   padding: 1rem;
   margin-right: 1.2rem;
 }
@@ -60,18 +76,18 @@
   font-size: 1rem;
 }
 .feed li {
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid #D2D1D1;
   margin: 0.3rem 0 1rem 0;
 }
 .feed li:last-child {
   border-bottom: 0;
 }
 
-/* detail page */
+/* story page */
 .story {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #288BD2;
+  border-bottom: 1px solid #D2D1D1;
 }
 .story h1 {
   border-bottom: 1px solid #f94040;
