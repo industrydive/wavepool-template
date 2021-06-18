@@ -1,3 +1,3 @@
 from settings import *  # NOQA
 
-USER_TYPE = 'SSEI'
+USER_TYPE = 'SEII'

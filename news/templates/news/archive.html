@@ -1,0 +1,11 @@
+{% extends 'wavepool/base.html' %}
+
+{% block page_content %}
+
+	<div class="row">
+		<h2>News Archive</h2>
+	</div>
+	<div class="row">
+		{% include 'news/includes/news_feed.html' with feed=news_archive feed_id="archive" format="detailed" %}
+	</div>
+{% endblock %}

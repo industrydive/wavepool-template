@@ -30,7 +30,7 @@
 				</ul>
 		</div>
 		{% for ticket in code_exercise_defs %}
-			{% if not show_senior_exercises or show_senior_exercises and ticket.is_senior %}
+			{% if user_type in ticket.user_types %}
 				<div class="card">
 						<div class="card-header">
 							<h1 class="card-title">{{ticket.title}}</h1>
@@ -53,7 +53,7 @@
 		{% endfor %}
 	</div>
 
-	{% if show_senior_exercises %}
+	{% if user_type == 'SSEI' %}
 		<div id="instructions">
 			<div class="row">
 				<h1>Code Review</h1>

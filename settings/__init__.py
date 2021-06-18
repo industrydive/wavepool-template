@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'advertising',
+    'news',
     'taxonomy',
     'wavepool',
 ]
@@ -114,4 +115,4 @@ STATIC_URL = '/static/'
 
 FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixtures'), ]
 
-SENIOR_USER = False
+USER_TYPE = 'SEI'

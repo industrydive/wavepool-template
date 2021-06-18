@@ -8,7 +8,7 @@ code_review_defs = [
             'All news posts that do not appear as the cover story or as top stories should be listed in the archive, ordered by most recent first',  # noqa
             'Newspost teasers should be properly rendered as HTML',
         ],
-        'is_senior': True,
+        'user_types': ['SSEI', 'SEII', 'SEI'],
         'pull_request': 'https://github.com/industrydive/wavepool/pull/2',
     },
 ]
@@ -17,15 +17,18 @@ code_design_defs = [
     {
         'title': 'Customize News Post Ads',
         'description': '''
-        The sales team currently sells a single advertisement to a client for the whole site. The HTML for this ad is manually updated via engineering team support tickets periodically.
-        The Sales Team wants the ability to create their own ads using the CMS and assign them to specific news posts in order to maximize revenue.
+        The sales team currently sells a single advertisement to a client for the whole site.
+        The HTML for this ad is periodically updated manually via engineering team support tickets.
+        The Sales Team wants the ability to create their own ads using the CMS and assign them to specific news posts
+        in order to maximize revenue.
         ''',
         'acceptance_criteria': [
             'A Sales Team member can access a set of standard admin pages in the CMS to create advertisements',
-            'For each advertisement they should be able to upload a client logo, a link that the ad should open to and the ad\'s text',
-            'Each advertisement should appear on the news post that is sold for',
+            'For each advertisement they should be able to upload a client logo, a link that the ad should open to, and the ad\'s text',
+            'Each advertisement should appear on the news post that it is sold for',
             'The Sales Team might sell more than one news post slot to a client at a time, so they should be able to set a single ad to multiple posts',
-        ]
+        ],
+        'user_types': ['SSEI', 'SEII'],
     },
 
 ]
@@ -53,7 +56,7 @@ code_exercise_defs = [
                 'test': 'test_newspost_teaser_render'
             },
         ],
-        'is_senior': False,
+        'user_types': ['SEI', ],
     },
     {
         'title': 'CMS forms',
@@ -73,7 +76,7 @@ code_exercise_defs = [
                 'test': 'test_only_one_cover_story'
             },
         ],
-        'is_senior': False,
+        'user_types': ['SEI', ],
     },
     {
         'title': 'News post detail page',
@@ -109,6 +112,6 @@ code_exercise_defs = [
                 'test': 'test_divesite_display_name'
             },
         ],
-        'is_senior': True,
+        'user_types': ['SSEI', 'SEI', 'SEII'],
     },
 ]
