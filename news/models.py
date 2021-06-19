@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Q
 from django.urls import reverse
 from django.utils import timezone
 
@@ -46,3 +47,13 @@ class NewsPost(models.Model):
         return [
             'HR', 'Diversity & Inclusion', 'Culture'
         ]
+
+    @classmethod
+    def search(cls, topic_ids=None, text_value=None):
+        results = cls.objects
+        if topic_ids:
+            topics = Topic.objects.filter(pk__in=topic_ids)
+            results = results.filter(topics__in=topics)
+        if text_value:
+            results = results.filter(Q(body__icontains=text_value) | Q(title__icontains=text_value))
+        return results.all()
