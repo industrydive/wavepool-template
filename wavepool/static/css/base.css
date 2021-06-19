@@ -51,4 +51,12 @@ h2 {
   color: #f94040;
 }
 
+.codeprompt-screenshot {
+  border: solid 1px #A8A8A8;
+  padding: 0.5rem;
+}
+.codeprompt-screenshot img {
+  width: 100%;
+}
+
 /*# sourceMappingURL=base.css.map */

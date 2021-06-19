@@ -39,8 +39,8 @@ class NewsPost(models.Model):
         return self.body[:150]
 
     @property
-    def source_divesite_name(self):
-        return 'Industry Dive'
+    def source_divesite(self):
+        return self.divesite.display_name
 
     def tags(self):
         return [

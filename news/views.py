@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.template import loader
 from django.http import HttpResponse
 
@@ -39,6 +40,7 @@ def newspost_detail(request, newspost_id):
 
 
 def archive(request):
+    messages.add_message(request, messages.ERROR, 'There is no cover story!')
     template = loader.get_template('news/archive.html')
     news_archive = NewsPost.objects.filter(active=True).order_by('-publish_date')
 

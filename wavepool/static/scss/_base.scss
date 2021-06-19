@@ -55,3 +55,13 @@ h2 {
 	text-transform: uppercase;
 	color: #f94040;
 }
+
+.codeprompt {
+	&-screenshot {
+		border: solid 1px #A8A8A8;
+		padding: .5rem;
+		img {
+			width: 100%;
+		}
+	}
+}

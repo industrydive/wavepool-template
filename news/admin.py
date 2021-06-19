@@ -10,6 +10,8 @@ class NewsPostForm(forms.ModelForm):
 
 class NewsPostAdmin(admin.ModelAdmin):
     form = NewsPostForm
+    list_display = ['title', 'source_divesite', 'is_cover_story', 'active']
+    list_editable = ['is_cover_story', 'active']
 
 
 admin.site.register(NewsPost, NewsPostAdmin)
