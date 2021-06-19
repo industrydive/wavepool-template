@@ -58,5 +58,8 @@ h2 {
 .codeprompt-screenshot img {
   width: 100%;
 }
+.codeprompt ol {
+  margin-left: 40px;
+}
 
 /*# sourceMappingURL=base.css.map */

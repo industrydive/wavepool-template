@@ -34,7 +34,7 @@ code_prompts = [
             Currently, there is no way to stop a CMS user from setting more than one story as the cover story. There is
             also nothing that alerts the Editorial Team if no story is currently set as a cover story.
             The front page template is not set up to allow for these situations. The Editorial team has requested a
-            couple of features to address this user experience. <br /><br />
+            couple of features to address this user experience:</p>
             <ol>
             <li>Update the CMS so that if a news post is set as the cover story, other news posts that are set as the
             cover story get un-set.</li>
