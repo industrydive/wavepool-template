@@ -28,7 +28,7 @@ code_prompts = [
             'News posts with HTML tags do not disrupt the HTML structure of the wavepool site'
         ],
         'objectives': [
-            'Demonstrate ability to comprehend and reproduce bug report',
+            'Demonstrate ability to comprehend and reproduce a bug report',
             'Demonstrate ability to design a solution that solves a minor bug',
         ],
         'relevant_screenshots': [
@@ -45,7 +45,8 @@ code_prompts = [
         The sales team currently sells a single advertisement to a client for the whole site.
         The HTML for this ad is periodically updated manually via engineering team support tickets.
         The Sales Team wants the ability to create their own ads using the CMS and assign them to specific news posts
-        in order to maximize revenue. The existing ads can be found in <code>advertising/__init__.py</code>
+        in order to maximize revenue. An <code>advertising</code> app already exists for you to build off of and the
+        existing ads can be found in a dictionary under <code>advertising/__init__.py</code>
         ''',
         'objectives': [
             'Demonstrate ability to comprehend user acceptance criteria',
