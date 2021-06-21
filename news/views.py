@@ -4,6 +4,7 @@ from django.http import HttpResponse
 
 from advertising import get_ad
 from news.models import NewsPost
+from news.helpers import parse_search_terms
 from taxonomy.models import Topic
 
 
@@ -44,23 +45,17 @@ def archive(request):
     messages.add_message(request, messages.ERROR, 'There is no cover story!')
     template = loader.get_template('news/archive.html')
     topics = Topic.objects.all().order_by('display_name')
-
-    if request.GET.get('submit'):
-        selected_topics = None
-        for key, value in request.GET.items():
-            if key.startswith('topics'):
-                if not selected_topics:
-                    selected_topics = []
-                selected_topics.append(int(value))
-        news_archive = NewsPost.search(topic_ids=selected_topics, text_value=request.GET.get('text_search'))
-    else:
-        news_archive = NewsPost.objects.filter(active=True).order_by('-publish_date')
+    selected_topics, text_search_value = parse_search_terms(request.GET)
+    news_archive = NewsPost.search(topics=selected_topics, text_value=text_search_value)
 
     context = {
         'news_archive': news_archive,
         'topics': topics,
         'text_search': request.GET.get('text_search'),
-        'selected_topics': selected_topics
+        'selected_topics': selected_topics,
+        'searched': selected_topics or text_search_value,
+        'selected_topics': selected_topics,
+        'text_search_value': text_search_value,
     }
 
     return HttpResponse(template.render(context, request))

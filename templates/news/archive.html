@@ -15,7 +15,7 @@
 				<ul class="form form-multiselect">
 				{% for topic in topics %}
 					<li><input type="checkbox" name="topics_{{topic.pk}}" id="id_topics_{{topic.pk}}" value="{{topic.id}}" 
-						{% if topic.pk in selected_topics %}checked=checked{% endif %}
+						{% if topic in selected_topics %}checked=checked{% endif %}
 						> {{topic.display_name}}</li>
 				{% endfor %}
 				</ul>
@@ -31,9 +31,32 @@
 			</div>
 		</div>
 	</form>
-	<div class="row">
-		<h2>News Archive</h2>
-	</div>
+	{% if searched %}
+		<span class="search">
+			<div class="row" id="search-result-header">
+				<h2>Search Results</h2>
+			</div>
+			<div class="row search-description">
+				{% if text_search_value %}
+				<div class="col">
+					<b>Search term:</b> "{{text_search_value}}"
+				</div>
+				{% endif %}
+				{% if selected_topics %}
+				<div class="col">
+					<b>Topics:</b> {% for topic in selected_topics %}
+						<div class="label label--tag">{{topic.display_name}}</div>
+					{% endfor %}
+				</div>
+				{% endif %}
+				
+			</div>
+		</span>
+	{% else %}
+		<div class="row">
+			<h2>News Archive</h2>
+		</div>
+	{% endif %}
 	<div class="row">
 		{% include 'news/includes/news_feed.html' with feed=news_archive feed_id="archive" format="detailed" %}
 	</div>

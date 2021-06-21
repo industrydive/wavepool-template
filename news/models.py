@@ -49,10 +49,9 @@ class NewsPost(models.Model):
         ]
 
     @classmethod
-    def search(cls, topic_ids=None, text_value=None):
+    def search(cls, topics=None, text_value=None):
         results = cls.objects
-        if topic_ids:
-            topics = Topic.objects.filter(pk__in=topic_ids)
+        if topics:
             results = results.filter(topics__in=topics)
         if text_value:
             results = results.filter(Q(body__icontains=text_value) | Q(title__icontains=text_value))

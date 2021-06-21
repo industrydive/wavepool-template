@@ -100,6 +100,16 @@ $dive-spoonser-blue: #288BD2;
 	}
 }
 
+.search {
+	&-description {
+		width: 100%;
+		padding: 1rem 0;
+		background-color: $dive-gray-extra-light;
+		border: 1px solid $dive-gray-light;
+		border-radius: 5px;
+	}
+}
+
 /* story page */
 .story {
 	margin-top: 1rem;
