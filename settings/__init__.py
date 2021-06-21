@@ -1,8 +1,12 @@
 import os
+import sys
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+REPOSITORY_ROOT = os.path.dirname(BASE_DIR)
+
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -112,9 +116,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_ROOT = 'static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+
 FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixtures'), ]
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 USER_TYPE = 'SEI'

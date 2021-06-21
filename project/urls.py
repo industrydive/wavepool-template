@@ -17,5 +17,4 @@ urlpatterns = [
     path('instructions/', wavepool_views.instructions, name='instructions'),
     path('api/v1/news/', api_views.NewsPostApi.as_view(), name='api_news')
 ]
-
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
