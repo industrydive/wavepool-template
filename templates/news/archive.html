@@ -24,7 +24,7 @@
 				<label for="text_search">Text:</label>
 			</div>
 			<div class="col">
-				<input type="text" id="id_text_search" name="text_search" class="form-control" value="{{text_search}}" />
+				<input type="text" id="id_text_search" name="text_search" class="form-control" {% if text_search %}value="{{text_search}}" {% endif %}/>
 			</div>
 			<div class="col">
 				<input type="submit" id="id_submit" name="submit" class="btn btn-dark" value="search" />

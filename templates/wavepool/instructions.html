@@ -15,19 +15,9 @@
 			<h2>Instructions</h2>
 		</div>
 		<div class="row">
-			<p>For as many of the tickets below as you can, submit a pull request to <strong>your copy</strong> of the <code>wavepool-template</code> repository that completes the request.</p>
+			<p>Select 2-3 of the tickets below and submit a pull request to <strong>your copy</strong> of the <code>wavepool-template</code> repository that completes as much of the request as you can.</p>
 
-			<p>For each pull request, include instructions for the reviewer to verify the behavior as well as commentary about your solutions. Code comments are encouraged!</p>
-		</div>
-		<div class="row">
-			<h2>Objectives</h2>
-		</div>
-		<div class="row">
-				<ul>
-					<li>Demonstrate basic web framework competencies using Django and Python</li>
-					<li>Demonstrate ability to read and comprehend user requests and acceptance criteria</li>
-					<li>Demonstrate ability to communicate coding decisions to other engineers</li>
-				</ul>
+			<p>For each pull request, include instructions for the reviewer to verify the behavior as well as commentary about your solutions. Code comments are highly encouraged!</p>
 		</div>
 		{% for ticket in code_prompts %}
 			<div class="card codeprompt">
@@ -35,8 +25,15 @@
 						<h1 class="card-title">{{ticket.title}}</h1>
 					</div>
 					<div class="card-body">
+						<h2 class="card-title">Objectives</h2>
+						<ul>
+							{% for obj in ticket.objectives %}
+								<li>{{obj}}</li>
+							{% endfor %}
+						</ul>
+					<h2 class="card-title">Description</h2>
 					<p class="card-text">{{ticket.description|safe}}</p>
-					<h2 class="card-title">Acceptance Criteria:</h2>
+					<h2 class="card-title">Acceptance Criteria</h2>
 						<ul>
 						{% for ac in ticket.acceptance_criteria %}
 							<li class="instructable-ac">
@@ -45,11 +42,16 @@
 						{% endfor %}
 						</ul>
 					{% if ticket.relevant_screenshots %}
-						<h2 class="card-title">Relevant Screenshots/Mocks:</h2>
+						<h2>Relevant Screenshots/Mocks:</h2>
 						{% for screenshot in ticket.relevant_screenshots %}
-							<div class="codeprompt-screenshot">
-								<img src='{% static "image/ac_screenshots/" %}{{screenshot}}' />
-							</div>
+							<span class="screenshots">
+								<div class="screenshots-screenshot">
+									<img src='{% static "image/ac_screenshots/" %}{{screenshot.source}}' />
+								</div>
+								<div class="screenshots-text">
+									{{screenshot.text}}
+								</div>
+							</span>
 						{% endfor %}
 					{% endif %}
 				</div>

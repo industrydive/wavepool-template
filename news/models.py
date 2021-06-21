@@ -55,4 +55,4 @@ class NewsPost(models.Model):
             results = results.filter(topics__in=topics)
         if text_value:
             results = results.filter(Q(body__icontains=text_value) | Q(title__icontains=text_value))
-        return results.all()
+        return set(results.all())

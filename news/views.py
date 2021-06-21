@@ -42,12 +42,10 @@ def newspost_detail(request, newspost_id):
 
 
 def archive(request):
-    messages.add_message(request, messages.ERROR, 'There is no cover story!')
     template = loader.get_template('news/archive.html')
     topics = Topic.objects.all().order_by('display_name')
     selected_topics, text_search_value = parse_search_terms(request.GET)
     news_archive = NewsPost.search(topics=selected_topics, text_value=text_search_value)
-
     context = {
         'news_archive': news_archive,
         'topics': topics,

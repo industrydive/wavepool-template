@@ -51,15 +51,23 @@ h2 {
   color: #f94040;
 }
 
-.codeprompt-screenshot {
+.codeprompt ol {
+  margin-left: 40px;
+}
+
+.screenshots-screenshot {
   border: solid 1px #A8A8A8;
   padding: 0.5rem;
 }
-.codeprompt-screenshot img {
+.screenshots-screenshot img {
   max-width: 100%;
 }
-.codeprompt ol {
-  margin-left: 40px;
+.screenshots-text {
+  color: #EC4444;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  margin-left: 0.5rem;
 }
 
 .form-multiselect {
