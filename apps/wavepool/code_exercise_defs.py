@@ -135,4 +135,35 @@ code_prompts = [
         ],
         'difficulty_out_of_3': 3,
     },
+    {
+        'title': 'Update the design of the homepage',
+        'description': '''
+            <p>The description will go here.</p>
+            <p>You can find the Figma mocks at <a href="https://www.figma.com/file/Pubxjh6UPRotdVPfN9Wsnr/Wave-Pool-Redesign?node-id=17%3A100">this link</a>, with the password "starwars."</p>
+        ''',
+        'acceptance_criteria': [
+            'The correct typefaces are served to the page (these can be found in the fonts folder)',
+            'The top header section has the correct image and title design to match the mocks',
+            'The newsfeed or top stories section has updated styling and layout to match the mocks',
+            'Extra credit 1: The newsfeed or top stories section that you have not already completed is styled to match the mocks',
+            'Extra credit 2: There is a newsletter sign up form that provides a success message on submission'
+            ,
+        ],
+        'objectives': [
+            'Demonstrate ability to comprehend user acceptance criteria',
+            'Demonstrate ability to design a front-end solution to a UX request',
+            'Demonstrate ability to implement a design that includes typefaces, layout, spacing and interactions',
+        ],
+        'relevant_screenshots': [
+            {
+                'source': 'halcyon-post.png',
+                'text': 'Option 1: Halcyon Post'
+            },
+            {
+                'source': 'tatooine-explorer.png',
+                'text': 'Option 2: Tatooine Explorer'
+            },
+        ],
+        'difficulty_out_of_3': 3,
+    },
 ]
