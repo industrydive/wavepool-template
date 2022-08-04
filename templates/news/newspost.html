@@ -7,21 +7,19 @@
 
 {% block page_content %}
 	<div class="row">
-		<div class="spoonser">
-			<div class="col-2"></div>
-			<div class="col">
+		<div class="col-md-8">
+			<div class="spoonser">
 				<a target="_blank" href="{{ad.url}}">
 					<div class="row">
-						<div class="col-4 spoonsor-image">
+						<div class="col-5 spoonsor-image">
 							<img src="{% static 'spoonsers/' %}{{ad.logo}}" width="200px" />
 						</div>
-						<div class="col spoonsor-content">
-							<span class="spoonsor-text">This news post is brought to you by {{ad.company_name}} - {{ad.copy}}</span>
+						<div class="col-7 spoonsor-content">
+							<div class="spoonsor-text">This news post is brought to you by {{ad.company_name}} - {{ad.copy}}</div>
 						</div>
 					</div>
 				</a>
 			</div>
-			<div class="col-2"></div>
 		</div>
 	</div>
 
@@ -33,19 +31,11 @@
 	<div class="row">
 		<div class="col story">
 			<span class="story-byline">
-				<div class="row">
-					<div class="label label--loud">{{newspost.publish_date}}</div>
-				</div>
-				<div class="row">
-					<h1 id="story-title">{{ newspost.title }}
-					</h1>
-				</div>
-				<div class="row">
-					<a href="{{newspost.source}}" target="_blank">See the live story at {{newspost.divesite.display_name}}
-					</a>
-				</div>
+				<div class="label label--loud">{{newspost.publish_date}}</div>
+				<h1 id="story-title">{{ newspost.title }}</h1>
+				<a href="{{newspost.source}}" target="_blank">See the live story at {{newspost.divesite.display_name}}</a>
 			</span>
-			<div class="row story-content">
+			<div class="story-content">
 				{{ newspost.body|safe }}
 			</div>
 		</div>
@@ -53,10 +43,12 @@
 
 	{% if newspost.tags %}
 		<div class="row">
+			<div class="col">
 			Topics:
 			{% for topic in newspost.topics.all %}
 				<div class="label label--tag">{{topic.display_name}}</div>
 			{% endfor %}
+			</div>
 		</div>
 	{% endif %}
 {% endblock %}
