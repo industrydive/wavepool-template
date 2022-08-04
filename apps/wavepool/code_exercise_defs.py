@@ -138,8 +138,8 @@ code_prompts = [
     {
         'title': 'Update the design of the homepage',
         'description': '''
-            <p>The description will go here.</p>
-            <p>You can find the Figma mocks at <a href="https://www.figma.com/file/Pubxjh6UPRotdVPfN9Wsnr/Wave-Pool-Redesign?node-id=17%3A100">this link</a>, with the password "starwars."</p>
+            <p>The publication has seen a decline in viewership and newsletter subscriptions. The editorial team has decided to go in a different direction with the company brand and has requested a redesign of its homepage. There are two possible design directions to take the publication, The Halcyon Post or the Tatooine Explorer. It's up to you to select the new design and implement it to help the company get back on track.<p>
+            <p>You can find the Figma mocks at <a href="https://www.figma.com/file/tb71FBGptjnOA8keT8Kw8S/Wave-Pool-%5BLocked%5D?node-id=0%3A1">this link</a>, with the password "starwars."</p>
         ''',
         'acceptance_criteria': [
             'The correct typefaces are served to the page (these can be found in the fonts folder)',
