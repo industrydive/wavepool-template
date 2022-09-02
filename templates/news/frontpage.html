@@ -7,6 +7,62 @@
 
 {% block page_content %}
 	<div class="row">
+		<h1 id="dashboard-title" class="col-lg-12">The Halcyon <span id="post">Post</span></h1>
+		<div id="header-image" class="col-lg-12" style="position: relative; z-index: 1;">
+			<img src="{% static 'image/halcyon-post/header.jpg' %}" height="530" />
+			<div id="header-image-text">
+				<a id="header-image-title" href="{{ cover_story.url }}">{{ cover_story.title }}</a>
+				<p id="header-image-teaser">{{ cover_story.teaser }}</p>
+			</div>
+		</div>
+	</div>
+	<div id="top-stories" class="row">
+		<h1 id="top-stories-header" class="col-lg-12">Top Stories</h1>
+		<div id="top-stories-main-post" class="col-md-6">
+			<img id="top-stories-image" src="{% static 'image/halcyon-post/top-story.jpg' %}" />
+			<a id="top-stories-main-title" href="{{ cover_story.url }}">{{ cover_story.title }}</a>
+			<div class="top-stories-topic-and-date">
+				<span>{{ cover_story.publish_date }} //</span>
+				<span>{{ cover_story.topics.first.display_name }}</span>
+				<!-- {% for topic in cover_story.topics.all %}
+					<span>{{topic.display_name}}</span>
+				{% endfor %} -->
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="row">
+				{% for feed_item in top_stories %}
+					<div class="col-md-6">
+						<div class="top-stories-topic-and-date">
+							<span>{{ feed_item.publish_date }} //</span>
+							<span>{{ cover_story.topics.first.display_name }}</span>
+							<!-- {% for topic in feed_item.topics.all %}
+								<span>{{topic.display_name}}</span>
+							{% endfor %} -->
+						</div>
+						<p class="top-stories-title">{{ feed_item.title }}</p>
+						<p class="top-stories-teaser">{{ feed_item.teaser }}</p>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<h1 id="newsfeed-header" class="col-lg-12">NEWSFEED</h1>
+		<div id="empire-newsfeed-wrapper" class="col-lg-12 justify-content-between">
+			<h1 id="empire-newsfeed" >The Empire Newsfeed</h1>
+			<a href="{% url 'newspost_archive' %}" class="align-self-center">View Archives >></a>
+		</div>
+		{% for feed_item in recent_stories %}
+			<div class="col-md-6 newfeed-item">
+				<p class="newsfeed-title">{{ feed_item.title }}</p>
+				<p class="newsfeed-date">{{ feed_item.publish_date }}</p>
+			</div>
+		{% endfor %}
+	</div>
+
+
+	<!-- <div class="row">
 		<div class="col-md-4">
 			<div id="coverstory" data-newspost-id="{{cover_story.pk}}">
 				<h2>Cover story</h2>
@@ -42,4 +98,4 @@
 			</div>
 		</div>
 	</div>
-{% endblock %}
+{% endblock %} -->

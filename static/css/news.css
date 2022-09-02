@@ -1,5 +1,18 @@
 /* colors */
 /* common elements */
+
+@font-face {
+  font-family: 'Staatliches';
+  src: url('../fonts/halcyon-post/Staatliches-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'SourceSerifPro-SemiBold';
+  font-style: normal;
+  font-weight: 600px;
+  src: url('../fonts/halcyon-post/SourceSerifPro-SemiBold.ttf')
+}
+
 .label {
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -115,3 +128,93 @@
 }
 
 /*# sourceMappingURL=news.css.map */
+
+#dashboard-title {
+  font-family: 'Staatliches';
+  font-size: 64px;
+  padding-bottom: 20px;
+}
+#dashboard-title #post {
+  color: red;
+}
+#header-image img {
+  width: 100%;
+}
+#header-image-text {
+  position: absolute;
+  bottom: 30px;
+  color: #2B2928;
+  left: 45px;
+  z-index: 3;
+  min-height: 143px;
+  width: 623px;
+  background: #EFEFEF;
+  border-radius: 6px;
+  padding: 20px;
+}
+#header-image-title {
+  font-family: 'SourceSerifPro-SemiBold';
+  font-size: 32px;
+}
+#header-image-teaser {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+#top-stories {
+  margin-top: 50px;
+}
+#top-stories-header {
+  color: #9D9D9D;
+  font-family: 'Staatliches';
+  text-align: center;
+  margin-bottom: 40px;
+}
+#top-stories-image {
+  width: 100%;
+}
+#top-stories-main-post {
+  text-align: center;
+}
+#top-stories-main-title {
+  font-family: 'SourceSerifPro-SemiBold';
+  font-size: 24px;
+}
+.top-stories-topic-and-date {
+  color: #F81547;
+  font-family: 'Staatliches';
+}
+.top-stories-title {
+  font-family: 'SourceSerifPro-SemiBold';
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.top-stories-teaser {
+  font-size: 14px;
+}
+#newsfeed-header {
+  margin: 50px 0 30px 0;
+  text-align: center;
+}
+#empire-newsfeed-wrapper {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+#empire-newsfeed {
+  display: inline-block;
+}
+#view-archives {
+  text-align: right;
+}
+.newfeed-item {
+  margin-top: 1.5rem;
+}
+.newsfeed-title {
+  font-family: 'SourceSerifPro-SemiBold';
+  font-size: 20px;
+  margin: 0;
+}
+.newsfeed-date {
+  font-family: 'Staatliches';
+  color: #6E707C;
+  margin: 0;
+}
