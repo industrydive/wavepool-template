@@ -18,32 +18,34 @@
 	</div>
 	<div id="top-stories" class="row">
 		<h1 id="top-stories-header" class="col-lg-12">Top Stories</h1>
-		<div id="top-stories-main-post" class="col-md-6">
-			<img id="top-stories-image" src="{% static 'image/halcyon-post/top-story.jpg' %}" />
-			<a id="top-stories-main-title" href="{{ cover_story.url }}">{{ cover_story.title }}</a>
+		<div class="col-sm-6 top-stories-main-post show-desktop">
+			<img class="top-stories-image" src="{% static 'image/halcyon-post/top-story.jpg' %}" />
+			<a class="top-stories-main-title" href="{{ cover_story.url }}">{{ cover_story.title }}</a>
 			<div class="top-stories-topic-and-date">
 				<span>{{ cover_story.publish_date }} //</span>
 				<span>{{ cover_story.topics.first.display_name }}</span>
-				<!-- {% for topic in cover_story.topics.all %}
-					<span>{{topic.display_name}}</span>
-				{% endfor %} -->
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-sm-6">
 			<div class="row">
 				{% for feed_item in top_stories %}
-					<div class="col-md-6">
+					<div class="top-stories-item col-md-6">
 						<div class="top-stories-topic-and-date">
 							<span>{{ feed_item.publish_date }} //</span>
 							<span>{{ cover_story.topics.first.display_name }}</span>
-							<!-- {% for topic in feed_item.topics.all %}
-								<span>{{topic.display_name}}</span>
-							{% endfor %} -->
 						</div>
-						<p class="top-stories-title">{{ feed_item.title }}</p>
+						<a class="top-stories-title" href="{{ feed_item.url }}">{{ feed_item.title }}</a>
 						<p class="top-stories-teaser">{{ feed_item.teaser }}</p>
 					</div>
 				{% endfor %}
+			</div>
+		</div>
+		<div class="col-sm-6 top-stories-main-post show-mobile">
+			<img class="top-stories-image" src="{% static 'image/halcyon-post/top-story.jpg' %}" />
+			<a class="top-stories-main-title" href="{{ cover_story.url }}">{{ cover_story.title }}</a>
+			<div class="top-stories-topic-and-date">
+				<span>{{ cover_story.publish_date }} //</span>
+				<span>{{ cover_story.topics.first.display_name }}</span>
 			</div>
 		</div>
 	</div>
@@ -51,7 +53,7 @@
 		<h1 id="newsfeed-header" class="col-lg-12">NEWSFEED</h1>
 		<div id="empire-newsfeed-wrapper" class="col-lg-12 justify-content-between">
 			<h1 id="empire-newsfeed" >The Empire Newsfeed</h1>
-			<a href="{% url 'newspost_archive' %}" class="align-self-center">View Archives >></a>
+			<a id="view-archives-desktop" href="{% url 'newspost_archive' %}" class="align-self-center show-desktop">View Archives >></a>
 		</div>
 		{% for feed_item in recent_stories %}
 			<div class="col-md-6 newfeed-item">
@@ -59,43 +61,6 @@
 				<p class="newsfeed-date">{{ feed_item.publish_date }}</p>
 			</div>
 		{% endfor %}
+		<a id="view-archives-mobile" href="{% url 'newspost_archive' %}" class="show-mobile col-lg-12">View Archives >></a>
 	</div>
-
-
-	<!-- <div class="row">
-		<div class="col-md-4">
-			<div id="coverstory" data-newspost-id="{{cover_story.pk}}">
-				<h2>Cover story</h2>
-				<ul class="feed feed--callout">
-					<li data-newspost-id="{{cover_story.pk}}" data-top-story-placement="{{forloop.counter}}">
-						<span class="label label--loud">
-							{{cover_story.publish_date}}
-						</span>
-						<div class="feed-link">
-							<a href="{{ cover_story.url }}">{{ cover_story.title }}</a>
-						</div>
-						<img src="{% static 'image/placeholder-img.jpg' %}"  width="300" height="175" />
-						<div class="feed-teaser" data-story_id="{{cover_story.pk}}">
-							{{ cover_story.teaser|safe  }} ...
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div id="topstories" class="col-md-8">
-			<h2>Top Stories</h2>
-			{% include 'news/includes/news_feed.html' with feed=top_stories feed_id="top_stories" format="basic" %}
-		</div>
-	</div>
-	<div id="archive" class="row">
-		<div class="col-md-12">
-			<h2>Feed</h2>
-			{% include 'news/includes/news_feed.html' with feed=recent_stories feed_id="recent_stories" format="basic" %}
-			<div class="pagenav">
-				<div class="pagenav-link">
-					<a href="{% url 'newspost_archive' %}">Archive >></a>
-				</div>
-			</div>
-		</div>
-	</div>
-{% endblock %} -->
+{% endblock %} 
