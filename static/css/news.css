@@ -3,19 +3,23 @@
 
 @font-face {
   font-family: 'Staatliches';
-  src: url('../fonts/halcyon-post/Staatliches-Regular.ttf')
+  font-style: normal;
+  font-weight: 400px;
+  src: url('../fonts/halcyon-post/Staatliches-Regular.ttf');
 }
 
 @font-face {
-  font-family: 'SourceSerifPro-SemiBold';
+  font-family: 'Source Serif Pro';
   font-style: normal;
   font-weight: 600px;
-  src: url('../fonts/halcyon-post/SourceSerifPro-SemiBold.ttf')
+  src: url('../fonts/halcyon-post/SourceSerifPro-SemiBold.ttf');
 }
 
 @font-face {
-  font-family: 'SourceSansPro-Regular';
-  src: url('../fonts/halcyon-post/SourceSansPro-Regular.ttf')
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 400px;
+  src: url('../fonts/halcyon-post/SourceSansPro-Regular.ttf');
 }
 
 #page_content {
@@ -162,11 +166,11 @@
   padding: 20px;
 }
 #header-image-title {
-  font-family: 'SourceSerifPro-SemiBold';
+  font-family: 'Source Serif Pro';
   font-size: 18px;
 }
 #header-image-teaser {
-  font-family: "SourceSansPro-Regular";
+  font-family: 'Source Sans 3';
   font-size: 14px;
   margin-bottom: 0;
 }
@@ -186,7 +190,7 @@
   text-align: center;
 }
 .top-stories-main-title {
-  font-family: 'SourceSerifPro-SemiBold';
+  font-family: 'Source Serif Pro';
   font-size: 20px;
 }
 .top-stories-item {
@@ -197,12 +201,12 @@
   font-family: 'Staatliches';
 }
 .top-stories-title {
-  font-family: 'SourceSerifPro-SemiBold';
+  font-family: 'Source Serif Pro';
   font-size: 20px;
   margin-bottom: 0;
 }
 .top-stories-teaser {
-  font-family: "SourceSansPro-Regular";
+  font-family: 'Source Sans 3';
   font-size: 14px;
 }
 #newsfeed-header {
@@ -218,7 +222,7 @@
 }
 #empire-newsfeed {
   display: inline-block;
-  font-family: 'SourceSerifPro-SemiBold';
+  font-family: 'Source Serif Pro';
   font-size: 26px;
 }
 #view-archives {
@@ -228,7 +232,7 @@
   margin-top: 1.5rem;
 }
 .newsfeed-title {
-  font-family: 'SourceSerifPro-SemiBold';
+  font-family: 'Source Serif Pro';
   font-size: 20px;
   margin: 0;
 }
