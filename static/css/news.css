@@ -1,26 +1,7 @@
 /* colors */
 /* common elements */
 
-@font-face {
-  font-family: 'Staatliches';
-  font-style: normal;
-  font-weight: 400px;
-  src: url('../fonts/halcyon-post/Staatliches-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'Source Serif Pro';
-  font-style: normal;
-  font-weight: 600px;
-  src: url('../fonts/halcyon-post/SourceSerifPro-SemiBold.ttf');
-}
-
-@font-face {
-  font-family: 'Source Sans 3';
-  font-style: normal;
-  font-weight: 400px;
-  src: url('../fonts/halcyon-post/SourceSansPro-Regular.ttf');
-}
+@import 'fonts.css';
 
 #page_content {
   margin-bottom: 2rem;
