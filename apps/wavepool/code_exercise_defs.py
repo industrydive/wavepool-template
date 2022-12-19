@@ -143,10 +143,10 @@ code_prompts = [
         ''',
         'acceptance_criteria': [
             'The correct typefaces are served to the page (these can be found in the fonts folder)',
-            'The top header section has the correct image and title design to match the mocks',
-            'The newsfeed or top stories section has updated styling and layout to match the mocks',
+            'The top header section has the correct image and title design to match the mocks - include desktop and mobile designs',
+            'The newsfeed or top stories section has updated styling and layout to match the mocks - include desktop and mobile designs',
             'Extra credit 1: The newsfeed or top stories section that you have not already completed is styled to match the mocks',
-            'Extra credit 2: There is a newsletter sign up form that provides a success message on submission'
+            'Extra credit 2: There is a newsletter sign up form that provides a success message on submission - no actual back end functionality needed'
             ,
         ],
         'objectives': [

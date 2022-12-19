@@ -1,0 +1,44 @@
+/* Halcyon fonts */
+@font-face {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/halcyon-post/Staatliches-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/halcyon-post/SourceSerifPro-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/halcyon-post/SourceSerifPro-SemiBold.ttf');
+}
+
+/* Tatooine fonts */
+@font-face {
+    font-family: 'Cinzel Decorative';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/tatooine-explorer/CinzelDecorative-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/tatooine-explorer/SourceSansPro-SemiBold.ttf');
+}
+
+/* Shared fonts in both Halcyon and Tatooine */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/halcyon-post/SourceSansPro-Regular.ttf');
+}
