@@ -135,4 +135,35 @@ code_prompts = [
         ],
         'difficulty_out_of_3': 3,
     },
+    {
+        'title': 'Update the design of the homepage',
+        'description': '''
+            <p>The publication has seen a decline in viewership and newsletter subscriptions. The editorial team has decided to go in a different direction with the company brand and has requested a redesign of its homepage. There are two possible design directions to take the publication, The Halcyon Post or the Tatooine Explorer. It's up to you to select the new design and implement it to help the company get back on track.<p>
+            <p>You can find the Figma mocks at <a href="https://www.figma.com/file/tb71FBGptjnOA8keT8Kw8S/Wave-Pool-%5BLocked%5D?node-id=0%3A1">this link</a>, with the password "starwars."</p>
+        ''',
+        'acceptance_criteria': [
+            'The correct typefaces are served to the page (these can be found in the fonts folder)',
+            'The top header section has the correct image and title design to match the mocks - include desktop and mobile designs',
+            'The newsfeed or top stories section has updated styling and layout to match the mocks - include desktop and mobile designs',
+            'Extra credit 1: The newsfeed or top stories section that you have not already completed is styled to match the mocks',
+            'Extra credit 2: There is a newsletter sign up form that provides a success message on submission - no actual back end functionality needed'
+            ,
+        ],
+        'objectives': [
+            'Demonstrate ability to comprehend user acceptance criteria',
+            'Demonstrate ability to design a front-end solution to a UX request',
+            'Demonstrate ability to implement a design that includes typefaces, layout, spacing and interactions',
+        ],
+        'relevant_screenshots': [
+            {
+                'source': 'halcyon-post.png',
+                'text': 'Option 1: Halcyon Post'
+            },
+            {
+                'source': 'tatooine-explorer.png',
+                'text': 'Option 2: Tatooine Explorer'
+            },
+        ],
+        'difficulty_out_of_3': 3,
+    },
 ]
